@@ -11,13 +11,6 @@ let inputTwo = prompt("Please enter your estimated monthly expenses")
 let inputThree = prompt("Please enter the number of months to project the budget for.")
 
 
-try{
-    if(isNAN(inputOne) || isNAN(inputTwo) || isNAN(inputThree)){
-        throw new Error("Can not have nonnumbers in your program.")
-    }
-} catch(error){
-    alert("Error you may not have nonnumbers in your program: " + error.message)
-}
 
 
 
@@ -65,6 +58,15 @@ for(let i = 0; i < inputThree; i++){
     let calcThree = calcOne + calcOne * i
     newParagraphFive.textContent = 'Month ' + (i + 1) + ": " + calcThree.toFixed(2)
     space.appendChild(newParagraphFive)
+}
+
+
+try{
+    if(isNAN(inputOne) || isNAN(inputTwo) || isNAN(inputThree)){
+        throw new Error("Can not have nonnumbers in your program.")
+    }
+} catch(error){
+    alert("Error you may not have nonnumbers in your program: " + error.message)
 }
 
 
