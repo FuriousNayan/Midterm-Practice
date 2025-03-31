@@ -62,7 +62,7 @@ for(let i = 0; i < inputThree; i++){
 
 
 try{
-    if(isNAN(inputOne) || isNAN(inputTwo) || isNAN(inputThree)){
+    if(isNaN(inputOne) || isNaN(inputTwo) || isNaN(inputThree)){
         throw new Error("Can not have nonnumbers in your program.")
     }
 } catch(error){
